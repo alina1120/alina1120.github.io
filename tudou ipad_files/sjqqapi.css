@@ -1,0 +1,138 @@
+#qqappextcontainer {
+	height: 1px; overflow: hidden; position: absolute;
+}
+.sjqqapi_popwin {
+	margin: 0px 0px 0px -220px; padding: 0px; left: 50%; width: 440px; text-align: left; color: rgb(102, 102, 102); font-size: 12px; display: none; position: absolute; z-index: 9999;
+}
+.sjqqapi_popwin .innner {
+	margin: 6px; border: 1px solid rgb(210, 212, 214); width: 428px; overflow: hidden; position: relative; box-shadow: 0px 6px 12px rgba(0,0,0,0.6); -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+.sjqqapi_popwin .sjqqapi_head {
+	background: url("http://img2.sj.qq.com/api/images/head_bg.jpg") repeat-x; width: 100%; height: 35px; color: rgb(51, 51, 51); line-height: 35px; overflow: hidden; font-weight: bold;
+}
+.sjqqapi_popwin .sjqqapi_close {
+	background: url("http://img2.sj.qq.com/api/images/head_close.png") no-repeat; margin: 0px; padding: 0px; border: currentColor; top: 13px; width: 9px; height: 9px; right: 12px; font-size: 0px; display: block; position: absolute; z-index: 9999; cursor: pointer;
+}
+.sjqqapi_popwin .sjqqapi_close_hover {
+	background: url("http://img2.sj.qq.com/api/images/head_close.png") no-repeat -9px 0px; margin: 0px; padding: 0px; border: currentColor; top: 13px; width: 9px; height: 9px; right: 12px; font-size: 0px; display: block; position: absolute; z-index: 9999; cursor: pointer;
+}
+.sjqqapi_popwin .sjqqapi_close_click {
+	background: url("http://img2.sj.qq.com/api/images/head_close.png") no-repeat -18px 0px; margin: 0px; padding: 0px; border: currentColor; top: 13px; width: 9px; height: 9px; right: 12px; font-size: 0px; display: block; position: absolute; z-index: 9999; cursor: pointer;
+}
+.sjqqapi_popwin .sjqqapi_content {
+	background: rgb(255, 255, 255); width: 100%; height: 225px; overflow: hidden; border-bottom-color: rgb(210, 212, 214); border-bottom-width: 1px; border-bottom-style: solid; position: relative;
+}
+.sjqqapi_popwin .clear {
+	clear: both;
+}
+.sjqqapi_popwin .content_bottom_arrow {
+	background: url("http://img2.sj.qq.com/api/images/arrow.png") no-repeat; left: 208px; width: 12px; height: 11px; bottom: 36px; position: absolute; _bottom: 31px;
+}
+.sjqqapi_popwin .sjqqapi_content .sjqqapi_con {
+	background: url("http://img2.sj.qq.com/api/images/sjqq_sprite.png") no-repeat 15px 0px; margin: 0px 0px 0px 30px; height: 84px; float: left; position: relative; _display: inline;
+}
+.sjqqapi_popwin .sjqqapi_em {
+	margin: 0px 0px 0px 180px; padding: 0px; width: 16em; color: rgb(51, 51, 51); line-height: 22px; overflow: hidden; font-size: 14px; font-style: normal; display: block;
+}
+.sjqqapi_popwin .siqqapi_em_color {
+	color: rgb(82, 126, 62); font-weight: bold;
+}
+.sjqqapi_popwin .sjqqapi_downloadapp {
+	background: url("http://img2.sj.qq.com/api/images/download_btn.png") no-repeat; margin: 0px; padding: 0px; border: currentColor; left: 137px; width: 161px; height: 35px; bottom: 22px; color: rgb(102, 102, 102); font-size: 14px; position: absolute; cursor: pointer;
+}
+.sjqqapi_popwin .sjqqapi_downloadapphover {
+	background: url("http://img2.sj.qq.com/api/images/download_btn.png") no-repeat 0px -35px; margin: 0px; padding: 0px; border: currentColor; left: 137px; width: 161px; height: 35px; bottom: 22px; color: rgb(102, 102, 102); font-size: 14px; position: absolute; cursor: pointer;
+}
+.sjqqapi_popwin .sjqqapi_checkbox {
+	background: url("http://img2.sj.qq.com/api/images/sjqq_sprite.png") no-repeat -138px -241px; margin: 0px; padding: 0px; border: currentColor; width: 16px; height: 16px; cursor: pointer;
+}
+.sjqqapi_popwin .sjqqapi_checkboxclick {
+	background: url("http://img2.sj.qq.com/api/images/sjqq_sprite.png") no-repeat -154px -241px; margin: 0px; padding: 0px; border: currentColor; width: 16px; height: 16px; cursor: pointer;
+}
+.sjqqapi_popwin .sjqqapi_xyapp {
+	margin: 10px 0px 0px 210px; border: currentColor; width: 140px; height: 16px; font-size: 12px; cursor: pointer;
+}
+.sjqqapi_popwin .sjqqapi_foot {
+	background: rgb(243, 244, 245); width: 100%; height: 40px; line-height: 40px; position: relative;
+}
+.sjqqapi_foot_info {
+	margin: 0px; padding: 0px; text-align: center; font-style: normal; display: block; white-space: nowrap;
+}
+.sjqqapi_popwin .sjqqapi_tp {
+	margin: 0px; padding: 0px; left: 50%; text-align: center; color: rgb(51, 51, 51); font-style: normal; float: left; display: block; white-space: nowrap; position: relative;
+}
+.sjqqapi_tp div {
+	right: 50%; position: relative;
+}
+.sjqqapi_tp .yyb_bg {
+	background: url("http://img2.sj.qq.com/api/images/yyb_ico.png") no-repeat 4px 0px; width: 24px; height: 16px; float: left; display: block;
+}
+.sjqqapi_content .sjqqapi_content_text {
+	float: left; display: block;
+}
+.sjqqapi_content .sjqqapi_content_app {
+	margin: 0px; padding: 0px; overflow: hidden; float: left; display: block; white-space: nowrap; -ms-word-break: keep-all; -ms-text-overflow: ellipsis; max-width: 90px;
+}
+.sjqqapi_popwin .sjqqapi_icon {
+	left: 85px; top: 4px; position: absolute;
+}
+.sjqqapi_popwin .sjqqapi_iconimg {
+	left: 85px; top: 4px; position: absolute;
+}
+.sjqqapi_popwin .sjqqapi_tip {
+	margin: 0px; padding: 24px 0px 0px; color: rgb(51, 51, 51); text-indent: 40px; font-size: 14px; _padding: 23px 0 0 0;
+}
+.sjqqapi_popwin .sjqqapi_st {
+	background: url("http://img2.sj.qq.com/api/images/sj_process.gif") no-repeat; left: 164px; top: 32px; width: 125px; height: 7px; position: absolute;
+}
+.sjqqapi_popwin .sjqqapi_st_arrow {
+	background: url("http://img2.sj.qq.com/api/images/sj_process_arrow.gif") no-repeat; left: 207px; top: 32px; width: 19px; height: 14px; position: absolute;
+}
+.sjqqapi_popwin .sjqqapi_sj {
+	background: url("http://img2.sj.qq.com/api/images/sj_ico.png") no-repeat; left: 296px; top: 0px; width: 47px; height: 81px; position: absolute;
+}
+.sjqqapi_popwin .sjqqapi_head_title_s {
+	margin: 0px; padding: 0px; height: 30px; text-indent: 0px; overflow: hidden; float: left; display: block; white-space: nowrap; -ms-word-break: keep-all; -ms-text-overflow: ellipsis; max-width: 90px;
+}
+.sjqqapi_head_title_s_con {
+	white-space: nowrap; -ms-word-break: keep-all; -ms-text-overflow: ellipsis; max-width: 90px;
+}
+.sjqqapi_popwin .sjqqapi_head_install {
+	text-indent: 10px; float: left; display: block;
+}
+.sjqqapi_popwin .sjqqapiti0 {
+	text-indent: 0px;
+}
+.sjqqapi_popwin .sjqqapi_c {
+	position: relative; _top: -30px;
+}
+.sjqqapi_popwin .lh30 {
+	line-height: 30px;
+}
+.sjqqapi_popwin .pt10 {
+	padding-top: 10px;
+}
+.sjqqapi_popwin .pt20 {
+	padding-top: 20px;
+}
+.sjqqapi_popwin .pb50 {
+	padding-bottom: 40px;
+}
+.sjqqapi_popwin .pb20 {
+	padding-bottom: 20px;
+}
+.sjqqapi_popwin .pt30 {
+	padding-top: 30px;
+}
+.sjqqapi_popwin .pt35 {
+	padding-top: 35px;
+}
+.sjqqapi_popwin .fs14 {
+	font-size: 14px;
+}
+.sjqqapi_popwin #dckb {
+	float: left; display: block;
+}
+.sjqqapi_popwin .c1071bb {
+	color: rgb(16, 113, 187); cursor: pointer;
+}
