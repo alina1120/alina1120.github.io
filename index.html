@@ -3,5 +3,217 @@
   <head>
     <title>Test Platform</title>
   </head>
-  <body>dsajfhjdskag</body>
+  <style>
+      body{
+          font-size: 16px;
+          background: -webkit-radial-gradient(center,#FCF8DE,#bcb9a6);
+          background: -moz-radial-gradient(center,#FCF8DE,#bcb9a6);
+          background: -o-radial-gradient(center,#FCF8DE,#bcb9a6);
+          padding-left: 20px;
+          padding-right: 20px;
+      }
+      li{
+          list-style: none;
+          color: #138be8;
+          padding: 0px;
+          margin: 0 auto;
+          height: 320px;
+      }
+
+      li.list1{
+          float: left;
+          padding: 0px;
+          margin: 0 auto;
+          width: 50%;
+          list-style: none;
+      }
+      a{
+          color: #09a4e8;
+          text-decoration: none;
+      }
+      a:hover{
+          color: #0dc0f2;
+      }
+      .PAGE_TITLE{
+          font-size: 32px;
+          padding: 20px;
+          width: 100%;
+          text-align: center;
+          color: #424239;
+      }
+      .panel_title{
+          padding: 5px;
+          padding-left: 10px;
+          width: 100px;
+          background: rgba(0,0,0,0.6);
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          color: #fff;
+      }
+      p{
+          font-size: 12px;
+          color: #333;
+          padding-right: 50px;
+      }
+      a{
+          font-size: 18px;
+          text-decoration: underline;
+      }
+
+      #gallery{
+          display: none;
+          position: absolute;
+          left:50%;
+          top:50%;
+          width: 800px;
+          height: 500px;
+          background: #fff;
+          padding: 10px;
+          border: 2px solid #cccccc;
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+      }
+  </style>
+  <body>
+  <div id="gallery">
+      <button onclick="ClosePopupView()"
+              style="float: right;position: absolute;right: 0px;top: 0px;
+              font-size: 12px;padding: 5px;
+              background: #000;color: #ffffff;border: none;">X Close</button>
+      <img src="" height="100%" width="100%" id="img_big"/>
+  </div>
+  <script>
+      function OpenPopupView(url){
+          var view_w = document.documentElement.clientWidth
+          var view_h =new GetPageScroll().Y;
+          var gallery = document.getElementById("gallery");
+          gallery.style.display="block";
+          gallery.style.left = view_w/2-400+"px";
+          gallery.style.top = view_h+"px";
+          document.getElementById("img_big").setAttribute("src",url);
+      }
+      function ClosePopupView(){
+          var gallery = document.getElementById("gallery");
+          gallery.style.display="none";
+      }
+      function GetPageScroll() {
+          var x, y;
+          if(window.pageYOffset) {
+              // all except IE
+              y = window.pageYOffset;
+              x = window.pageXOffset;
+          } else if(document.documentElement
+                  && document.documentElement.scrollTop) {
+              // IE 6 Strict
+              y = document.documentElement.scrollTop;
+              x = document.documentElement.scrollLeft;
+          } else if(document.body) {
+              // all other IE
+              y = document.body.scrollTop;
+              x = document.body.scrollLeft;
+          }
+          return {X:x, Y:y};
+      }
+  </script>
+  <div>
+      <p class="page_title">TEST PLATFORM</p>
+      <p>以“用户”为中心一直是近年来网络应用的设计宗旨，应用的设计和优化往往更依赖于用户研究得来的结果。</p>
+      <p>依赖于网络，如今很多的用户行为记录都可以通过服务端的日志记录等分析得到，
+          然而对这些"raw data"的处理目前仍套用CRM中的一些模版，其结果更适合于营销专业的人来理解，而对于设计人员来说，
+          这些数据反应的关键值并不能直观地反应出应用中的元素。
+      </p>
+      <p>下面的列表中，对一组相同数据做了不同的可视化操作，左边的"Traditional method"是模拟目前主流的NBA工具进行可视化处理，
+      右边的“Design Method"则是将数据与设计过程中的一些元素关联起来进行可视化。</p>
+      <p>数据来源于一款基于家庭照片分享的平台中，平台考虑到不同年龄段的用户，分别在电子相框，手机和电脑PC端做了客户端，
+          这些客户端之间支持照片的相互分享和留言。</p>
+      <p>该实验通过AB对照，希望能测试新可视化方法是否能快速地帮助设计师了解目前应用的使用现状，并启发设计师提出更多更好的修改策略。</p>
+  </div>
+  <ul>
+      <li class="list1">
+          <!--li><a href="page1.html">不同设备的操作记录</a></li-->
+          <p class="panel_title">Traditional</p>
+          <ul>
+              <li>
+                  <p><a href="page2_trad.html">各时段用户发送量统计图</a></p>
+                  <p><img href="page2_trad.html"  title="点击标题查看demo"
+                          onclick="OpenPopupView(this.src)"
+                          src="images/heatmap_trad.png" width="300" height="200"></p>
+                  <p>用户行为中的操作频率图，用于了解应用使用的高峰频段和并发量。</p>
+              </li>
+              <li>
+                  <p><a href="page_biparite_trad.html">设备连接和发送比例</a></p>
+                  <p><img href="page_biparite_trad.html"  title="点击标题查看demo"
+                          onclick="OpenPopupView(this.src)"
+                          src="images/bipartite_trad.png" width="300" height="200"></p>
+                  <p>用户饼图来统计不同连接类型的比例，了解高频发送量产生的连接特征。</p>
+              </li>
+              <li>
+                  <p><a href="page4_trad.html">网络节点拓扑图</a></p>
+                  <p><img href="page4_trad.html" title="点击标题查看demo"
+                          onclick="OpenPopupView(this.src)"
+                          src="images/relation_trad.png" width="300" height="200"/></p>
+                  <p>用户关系图，以关系数据的形式把社交用户的连接关系表现出来，不同颜色代表不同设备，蓝色为相框，绿色为手机，红色为PC客户端。</p>
+              </li>
+              <li>
+                  <p><a href="page_flow_trad.html">用户操作记录</a></p>
+                  <p><img href="page_flow_trad.html"  title="点击标题查看demo"
+                          onclick="OpenPopupView(this.src)"
+                          src="images/op_frequency_trad.png" width="300" height="200"/></p>
+                  <p>统计不同操作的操作总数，根据操作量对操作行为的重要度进行排序，以用于规划页面的排序和操作按钮的排版。</p>
+              </li>
+          </ul>
+      </li>
+      <li class="list1">
+          <p class="panel_title">New</p>
+          <ul>
+              <li>
+                  <p><a href="page2.html" >各时段用户发送量统计图</a></p>
+                  <p><img src="images/heatmap.png" width="300" height="200"
+                          onclick="OpenPopupView(this.src)" title="点击标题查看demo"></p>
+                  <p>1. 使用Matrix形式，时间段划分明显，更适合阅读。</p>
+                  <p>2. 该图重点在于找到用户发送的高频时段，将发送量的具体数字抽象化为颜色，更利于体现主要数据。</p>
+              </li>
+              <li>
+                  <p><a href="page_biparite.html">设备连接和发送比例</a></p>
+                  <p><img src="images/bipartite.png" width="300" height="200"
+                          onclick="OpenPopupView(this.src)" title="点击标题查看demo"></p>
+                  <p>1. 关联显示设备连接数与之间的发送量数据，在不同基数的情况下，都能利于对比出不同设备的发送频率差异</p>
+                  <p>2. 抛开legend标签，数据信息与图表内容关联显示，table形式的排版也更利于查询和阅读。</p>
+              </li>
+              <li>
+                  <p><a href="page4.html">网络节点拓扑图</a></p>
+                  <p><img src="images/relation.png" width="300" height="200"
+                          onclick="OpenPopupView(this.src)" title="点击标题查看demo"/></p>
+                  <p>1. 利用动画形式，将用户节点的生成和连接过程表现出来，适合设计师理解社交用户群的形成过程。</p>
+                  <p>2. 利用用户的发送量对用户间的连接赋予权值，按照权值对用户间的远近距离进行排序，从发送行为层来了解用户间的关系模式。</p>
+                  <p>3. 增加节点过滤和连接类型过滤</p>
+              </li>
+              <li>
+                  <p><a href="page_flow.html">用户操作记录</a></p>
+                  <p><img src="images/op_frequency.png" width="300" height="200"
+                          onclick="OpenPopupView(this.src)" title="点击标题查看demo"/></p>
+                  <p>1. 将发送操作与交互流程中的步骤关联，以UserPath的形式让设计师理解用户行为的模式。</p>
+                  <p>2. 用flow图表的形式把操作流的进行效率表现出来，更能对比出不同深度级下，操作的频率。</p>
+              </li>
+          </ul>
+      </li>
+  </ul>
+
+  <!--  MouseStats:Begin  -->
+  <script type="text/javascript">
+      var MouseStats_Commands = MouseStats_Commands ? MouseStats_Commands : [];
+      (function () {
+          if(document.getElementById('MouseStatsTrackingScript') == undefined) {
+              var mousestats_script = document.createElement('script');
+              mousestats_script.type = 'text/javascript';
+              mousestats_script.id = 'MouseStatsTrackingScript';
+              mousestats_script.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www2') + '.mousestats.com/js/5/3/5356032144356128706.js?' + Math.floor(new Date().getTime()/600000);
+              mousestats_script.async = true;
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(mousestats_script);
+          } })();
+  </script>
+  <!--  MouseStats:End  -->
+</body>
 </html>
